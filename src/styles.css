@@ -142,3 +142,27 @@
     color: var(--color-foreground);
   }
 }
+
+:root {
+  --radius: 1.25rem;
+  --background: oklch(0.975 0.012 50);
+  --foreground: oklch(0.25 0.06 350);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.06 350);
+  --primary: oklch(0.3 0.11 350);
+  --primary-foreground: oklch(0.98 0.01 350);
+  --secondary: oklch(0.95 0.025 15);
+  --secondary-foreground: oklch(0.3 0.11 350);
+  --muted: oklch(0.95 0.02 30);
+  --muted-foreground: oklch(0.48 0.04 350);
+  --accent: oklch(0.72 0.12 10);
+  --accent-foreground: oklch(0.98 0.01 350);
+  --border: oklch(0.91 0.025 20);
+}
+@theme inline {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
+body { font-family: var(--font-sans); background: var(--background); color: var(--foreground); }
+@keyframes confetti-fall { to { transform: translateY(110vh) rotate(720deg); opacity: .9; } }
+@utility confetti { animation: confetti-fall linear forwards; }
